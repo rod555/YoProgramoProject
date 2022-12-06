@@ -102,3 +102,34 @@ display: flex;
 color: black;
 }
 
+.btn-edit {
+/*background-color: black;*/
+border-radius: 6px;
+border: none;
+/*color: #fff;*/
+cursor: pointer;
+font-size: 16px;
+padding: 16px 24px;
+text-align: center;
+text-transform: uppercase;
+/*width: auto;*/
+}
+    
+.btn-edit:hover {
+/*background-color: #FB7E29;
+color: #fff;*/
+cursor:crosshair;
+}
+    
+.btn-right {
+/*background-color: black;*/
+border-radius: 6px;
+border: none;
+/*color: #fff;*/
+cursor: pointer;
+font-size: 16px;
+padding: 16px 24px;
+text-align: right;
+text-transform: uppercase;
+/*width: auto;*/
+}

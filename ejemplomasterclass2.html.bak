@@ -26,8 +26,6 @@ sexto con otra info –>
       <link rel="stylesheet" href="all.css">
       <link rel="stylesheet" href="bootstrap.min.css">
       <link rel="stylesheet" href="styles.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-      <!--<link rel="stylesheet" href="./fontawesome/css/all.css">-->
       
       
   </head>
@@ -42,7 +40,7 @@ sexto con otra info –>
           <div id="info">
             <div id="info-img">
               <img class="profile-image" src="linktoPersonalFotoDB.jpg">
-              <div class="btn-edit"><i class="bi bi-pencil-square"></i></a></div>
+              <div class="btn-edit"><a href="#" class="btn-right"><i class="fas fa-pencil-alt"></i></a></div>
             </div>
           </div>
 
@@ -52,7 +50,7 @@ sexto con otra info –>
                 <div id="info-company">Link to PositionEnDB</div>
                 <div id="info-contact">
                   <span>Link to ResidenciaEnDB</span>
-                  <span><a href="#">Información de contacto</a></span>
+                  <span><a href="#">Informacién de contacto</a></span>
                 </div>
               </div>
               <ul id="info-details">
@@ -83,8 +81,8 @@ sexto con otra info –>
       <div class="card-titles"> 
         <h2>Acerca de</h2> 
         <div class="btn-edit" onclick="cambiar_parrafo()">
-          <a href="#" class=""> 
-            <i class="btn-right fa fa-pen"></i> 
+          <a href="4" class="btn-right"> 
+            <i class="fa fa-pen"></i> 
           </a> 
         </div> 
       </div> 
@@ -146,6 +144,5 @@ sexto con otra info –>
     }
     </script>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
+  
 </HTML>
