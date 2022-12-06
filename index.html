@@ -19,66 +19,62 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <meta name="viewport” contents"width=device-width, initial-scale=1>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-
     <title>Link to TitlePortfolioDB</title>
   </head>
 
   <body>
-
     <img src="./logosrequeridos.png">
     
     <button onclick="validarSuperuser()">LogIn Superuser</button>
     <button onclick="logOut()">LogOut</button>
     
     <div class="card imagenFondo" id="first-card">
-          <div id="profile-background"><img src="linktoBckgFotoDB.jpg">
-          </div>
+        <div id="profile-background"><img src="linktoBckgFotoDB.jpg">
+        </div>
 
-          <div id="info">
-            <img class="profile-image" src="linktoPersonalFotoDB.jpg">
-              
-            <div class="botonEdicion" style="display:none" id="info-img">
-              <div class="btn-edit"><img src="./pencil-square.svg" alt="Editar" width="20" height="20"></a></div>
-            </div>
-          </div>
-
-          <div id="info-data">
-              <div>
-                <h1>link to NombreEnDB</h1>
-                <div id="info-company">Link to PositionEnDB</div>
-                <div id="info-contact">
-                  <span>Link to ResidenciaEnDB</span>
-                  <span><a href="#">Información de contacto</a></span>
-                </div>
-              </div>
-              <ul id="info-details">
-                <li><a href="#">
-                  <img src="ico.jpg">
-                  <h2>Link to PosicionActualDB</h2>
-                  </a>
-                </li>
-                <li><a href="#">
-                  <img src="ico.jpg">
-                  <h2>Link to PosActualDB</h2>
-                </a>
-                </li>
-              </ul>
-              
-          </div>
-          <div id="info-actions">
-            <button type="button" class="btn btn-primary">Tengo interés en</button>
-            <button type="button" class="btn btn-light">Afadir Seccidn</button>
-            <button type="button" class="btn btn-light">Mas</button>
+        <div id="info">
+          <img class="profile-image" src="linktoPersonalFotoDB.jpg">
             
+          <div id="info-img">
+            <div style="display:none" class="btn-edit"><img src="./pencil-square.svg" alt="Editar" width="20" height="20"></a></div>
           </div>
-          
-              
+        </div>
+
+        <div id="info-data">
+            <div>
+              <h1>link to NombreEnDB</h1>
+              <div id="info-company">Link to PositionEnDB</div>
+              <div id="info-contact">
+                <span>Link to ResidenciaEnDB</span>
+                <span><a href="#">Información de contacto</a></span>
+              </div>
+            </div>
+            <ul id="info-details">
+              <li><a href="#">
+                <img src="ico.jpg">
+                <h2>Link to PosicionActualDB</h2>
+                </a>
+              </li>
+              <li><a href="#">
+                <img src="ico.jpg">
+                <h2>Link to PosActualDB</h2>
+              </a>
+              </li>
+            </ul>
+        </div>
+
+        <div id="info-actions">
+          <button type="button" class="btn btn-primary">Tengo interés en</button>
+          <button type="button" class="btn btn-light">Anadir Seccion</button>
+          <button type="button" class="btn btn-light">Mas</button>
+        </div>
+               
     </div>
 
-    <div class="card imagenFondo">
+    <!--Acerca de--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Acerca de</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()" style="display:none">
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()" style="display:none">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -88,14 +84,12 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
-    
-    
-    
-      <div class="card imagenFondo">
+    </div> 
+  
+    <!--Antecedentes laborales--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Antecedentes laborales</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20" >
           </div> 
         </div> 
@@ -105,12 +99,12 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-antecedentes" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
-    
-      <div class="card imagenFondo">
+    </div>
+
+    <!--Educacion--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Educacion</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -120,12 +114,12 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-educacion" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
+    </div>
 
-      <div class="card imagenFondo">
+    <!--Skilss--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Hard y soft skills</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -135,12 +129,12 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-skils" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
-      
-      <div class="card imagenFondo">
+    </div>
+
+    <!--Proyectos Realizados--><div class="card imagenFondo">
         <div class="card-titles"> 
-          <h2>Hard y soft skills</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <h2>Proyectos Realizados</h2> 
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -150,12 +144,12 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-proyectos" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
+    </div>
 
-      <div class="card imagenFondo">
+    <!--otros Intereses--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Otros intereses</h2> 
-          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -165,15 +159,10 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         <div> 
             <input id="edit-otros" type="text" oninput="myFunction2(this.value)" style="display:none"> 
         </div>
-      </div> 
-
-      
+    </div> 
     
-    
-    
-    
-    <!-- <input type="file" id="filel" onchange="showFile(this)"> --> 
-    
+  </body>
+  
     <script>
 
       //funcion que      
@@ -184,56 +173,39 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       function cambiar_parrafo(){
           document.getElementById("edit-acercade").style.display="block";
           let texto = document.getElementById("text-acercade").innerText;
-      
       };
       
       function myFunction2(valor){
           document.getElementById("text-acercade").innerText=valor;
       };
             
-    
       //controla si se presiono un enter
-      let textarea=document.getElementById("edit-acercade")
-      textarea.addEventListener('keyup', (e) => {
-        logMessage(`Key "${e.key}" released [event: keyup]`);
+      document.getElementById("edit-acercade").addEventListener('keyup', (e) => {
         if (e.key=="Enter"){
           document.getElementById("edit-acercade").style.display="none"
         }
       });
-      
-      //carga el contenido de un archivo de texto
-      //y lo muestra en el parrafo
-      function showFile(input) {
-        let file = input.files[e];
-        alert(`File name: ${file.name}`); // e.g my.png
-        alert(`Last modified: ${file.lastModified}`); // e.g 1552830408824
-        
-        let reader = new FileReader();
-        reader.readAsText(file);
-        reader.onload = function() {
-            console.log(reader.result);
-            document.getElementById("text-acercade").innerText=reader.result;
-        };
-        reader.onerror = function() {
-            console.log(reader.error);
-        };
-      }
 
       function validarSuperuser(){
-       var elementosDeEdicion=document.getElementsByClassName("btn-edit");
-       elementosDeEdicion.forEach(element => {
-        element.style.display="block";
-       });
+            /*var elementosDeEdicion=document.getElementsByClassName("btn-edit");
+            elementosDeEdicion.forEach(element => {
+                element.style.display="block";
+            });*/
+       const collection = document.getElementsByClassName("btn-edit");
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].style.display="block";
+        }
       }
       
       function logOut(){
-        var elementosDeEdicion=document.getElementsByClassName("btn-edit");
-        elementosDeEdicion.forEach(element => {
-            element.style.display="none";
-        });
+        const collection = document.getElementsByClassName("btn-edit");
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].style.display="none";
+        }
       }
+      
     </script>
-  </body>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 </HTML>
