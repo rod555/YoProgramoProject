@@ -1,4 +1,4 @@
-.mat-card {
+.imagenFondo {
 border-radius: 32px;
 margin: 10px 10px;
 padding: 20px;
@@ -14,7 +14,7 @@ border-radius: 32px 32px 0 0;
 border-radius: 50%;
 width: 152px;
 height: 152px;
-margin-top: -110px;
+margin-top: -80px;
 z-index: 300;
 }
 
@@ -24,46 +24,47 @@ padding-bottom:32px;
 padding-left:32px;
 }
 
-div#info-actions button {
+/*div#info-actions button {
 margin-right: 8px;
-}
+}*/
 
-div#info-contact span {
+/*div#info-contact span {
 font-size: 1rem;
 font-weight: 400;
-}
+}*/
 
-div#info-contact span a {
+/*div#info-contact span a {
 color: #0a66c2;
 touch-action: manipulation;
 text-decoration: none;
-}
+}*/
 
-div#info-company {
+/*div#info-company {
 font-size: 1rem;
 font-weight: 400;
 line-height: 1.25;
-}
+}*/
 
 div#info-data {
 display: flex;
 justify-content: space-between;
 }
 
-div#info-data h1 {
+/*div#info-data h1 {
 font-size: 1.8rem;
 display: inline;
 font-weight: 500;
 line-height: 1.25;
 word-wrap: break-word;
 word-break: break-word;
-}
+}*/
 
 div#info-data ul#info-details {
 width: 232px;
 list-style: none;
 flex-shrink: 0;
 }
+
 
 div#info-data ul#info-details li a {
 color: black;
@@ -84,52 +85,32 @@ height: 32px;
 margin-right: 20px;
 }
 
-ul.items-list {
+/*ul.items-list {
 list-style: none inside;
-}
+}*/
 
-ul.items-list li {
+/*ul.items-list li {
 display: flex;
 margin: 10px 0;
-}
+}*/
 
-ul.items-list li div.data-container {
+/*ul.items-list li div.data-container {
 flex-grow: 1;
-}
+}*/
 
-ul.items-list li div.data-container a {
+/*ul.items-list li div.data-container a {
 display: flex;
 color: black;
-}
+}*/
 
 .btn-edit {
-/*background-color: black;*/
 border-radius: 6px;
-border: none;
-/*color: #fff;*/
 cursor: pointer;
-font-size: 16px;
-padding: 16px 24px;
+padding: 16px 16px;
 text-align: center;
 text-transform: uppercase;
-/*width: auto;*/
 }
     
 .btn-edit:hover {
-/*background-color: #FB7E29;
-color: #fff;*/
-cursor:crosshair;
-}
-    
-.btn-right {
-/*background-color: black;*/
-border-radius: 6px;
-border: none;
-/*color: #fff;*/
-cursor: pointer;
-font-size: 16px;
-padding: 16px 24px;
-text-align: right;
-text-transform: uppercase;
-/*width: auto;*/
+cursor:pointer;
 }
