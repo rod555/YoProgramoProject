@@ -1,16 +1,14 @@
-<!– Esto es un comentario –>
+<!-- Header con logo y en esquina opuesta links a redes y boton de edicion
 
-<!– Header con logo y en esquina opuesta links a redes y boton de edicion–>
-
-<!– Body dividivo en al menos 5 cuerpos,
+Body dividivo en al menos 5 cuerpos,
 principal con foto nombre e informacion personal basica
 segundo con la experiencia laboral
 tercero con educacion
 cuarto con hard y soft skills, este graficado (como usuario mostrar diferentes graficos?)
 quinto con proyectos realizados
-sexto con otra info –>
+sexto con otra info
 
-<!– El doucmento debe encerrarse por completo entre los tags html y los dos principales son luego head y body –>
+El doucmento debe encerrarse por completo entre los tags html y los dos principales son luego head y body -->
 
 
 <!DOCTYPE html>
@@ -74,19 +72,102 @@ sexto con otra info –>
     </div>
 
     <div class="card imagenFondo">
-      <div class="card-titles"> 
-        <h2>Acerca de</h2> 
-        <div class="btn-edit" onclick="cambiar_parrafo()">
-          <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+        <div class="card-titles"> 
+          <h2>Acerca de</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
         </div> 
+        <div> 
+            <p id="text-acercade">Matematico, fisico e imformatico argentine</p> 
+        </div>
+        <div> 
+            <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
       </div> 
-      <div> 
-          <p id="text-acercade">Matematico, fisico e imformatico argentine</p> 
-      </div>
-      <div> 
-          <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none"> 
-      </div>
-    </div> 
+    
+    
+    
+      <div class="card imagenFondo">
+        <div class="card-titles"> 
+          <h2>Antecedentes laborales</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
+        </div> 
+        <div> 
+            <p id="text-antecedentes">Link a los disitintos antecdentes en la DB</p> 
+        </div>
+        <div> 
+            <input id="edit-antecedentes" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
+      </div> 
+    
+      <div class="card imagenFondo">
+        <div class="card-titles"> 
+          <h2>Educacion</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
+        </div> 
+        <div> 
+            <p id="text-educacion">Link a los disitintos niveles educactivos en la DB</p> 
+        </div>
+        <div> 
+            <input id="edit-educacion" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
+      </div> 
+
+      <div class="card imagenFondo">
+        <div class="card-titles"> 
+          <h2>Hard y soft skills</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
+        </div> 
+        <div> 
+            <p id="text-skills">Link a los disitintos skills en la DB</p> 
+        </div>
+        <div> 
+            <input id="edit-skils" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
+      </div> 
+      
+      <div class="card imagenFondo">
+        <div class="card-titles"> 
+          <h2>Hard y soft skills</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
+        </div> 
+        <div> 
+            <p id="text-proyectos">Link a los distintos proyectos en la DB</p> 
+        </div>
+        <div> 
+            <input id="edit-proyectos" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
+      </div> 
+
+      <div class="card imagenFondo">
+        <div class="card-titles"> 
+          <h2>Otros intereses</h2> 
+          <div class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          </div> 
+        </div> 
+        <div> 
+            <p id="text-otros">Link a los distintos intereses en la DB</p> 
+        </div>
+        <div> 
+            <input id="edit-otros" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+        </div>
+      </div> 
+
+      
+    
+    
+    
+    
     <!-- <input type="file" id="filel" onchange="showFile(this)"> --> 
     
     <script>
