@@ -1,0 +1,143 @@
+<!– Esto es un comentario –>
+
+<!– Header con logo y en esquina opuesta links a redes y boton de edicion–>
+
+<!– Body dividivo en al menos 5 cuerpos,
+principal con foto nombre e informacion personal basica
+segundo con la experiencia laboral
+tercero con educacion
+cuarto con hard y soft skills, este graficado (como usuario mostrar diferentes graficos?)
+quinto con proyectos realizados
+sexto con otra info –>
+
+<!– El doucmento debe encerrarse por completo entre los tags html y los dos principales son luego head y body –>
+
+
+<!DOCTYPE html>
+<HTML>
+
+  <head>
+    <meta http-equiv=UA-Compatible” content="IE=edge">
+    <meta name="viewport” contents"width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Link to TitlePortfolioDB</title>
+  </head>
+
+  <body>
+
+    <img src="./logosrequeridos.png">
+
+    <div class="card imagenFondo" id="first-card">
+          <div id="profile-background"><img src="linktoBckgFotoDB.jpg">
+          </div>
+
+          <div id="info">
+            <div id="info-img">
+              <img class="profile-image" src="linktoPersonalFotoDB.jpg">
+              <div class="btn-edit"><img src="./pencil-square.svg" alt="Editar" width="20" height="20"></a></div>
+            </div>
+          </div>
+
+          <div id="info-data">
+              <div>
+                <h1>link to NombreEnDB</h1>
+                <div id="info-company">Link to PositionEnDB</div>
+                <div id="info-contact">
+                  <span>Link to ResidenciaEnDB</span>
+                  <span><a href="#">Información de contacto</a></span>
+                </div>
+              </div>
+              <ul id="info-details">
+                <li><a href="#">
+                  <img src="ico.jpg">
+                  <h2>Link to PosicionActualDB</h2>
+                  </a>
+                </li>
+                <li><a href="#">
+                  <img src="ico.jpg">
+                  <h2>Link to PosActualDB</h2>
+                </a>
+                </li>
+              </ul>
+              
+          </div>
+          <div id="info-actions">
+            <button type="button" class="btn btn-primary">Tengo interés en</button>
+            <button type="button" class="btn btn-light">Afadir Seccidn</button>
+            <button type="button" class="btn btn-light">Mas</button>
+            
+          </div>
+          
+              
+    </div>
+
+    <div class="card imagenFondo">
+      <div class="card-titles"> 
+        <h2>Acerca de</h2> 
+        <div class="btn-edit" onclick="cambiar_parrafo()">
+          <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+        </div> 
+      </div> 
+      <div> 
+          <p id="text-acercade">Matematico, fisico e imformatico argentine</p> 
+      </div>
+      <div> 
+          <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+      </div>
+    </div> 
+    <!-- <input type="file" id="filel" onchange="showFile(this)"> --> 
+    
+    <script>
+
+      //funcion que      
+      //cambia el estilo del input a visible      
+      //toma el valor del texto del parrafo con id “text-acercade”      
+      //lo muestra en consola
+      
+      function cambiar_parrafo(){
+          document.getElementById("edit-acercade").style.display="block";
+          let texto = document.getElementById("text-acercade").innerText;
+          console.log(texto);
+      };
+      
+      function myFunction2(valor){
+          document.getElementById("text-acercade").innerText=valor;
+      };
+            
+      function logMessage(message) {
+        console.log(message + "<br>");
+      };
+
+      //controla si se presiono un enter
+      let textarea=document.getElementById("edit-acercade")
+      textarea.addEventListener('keyup', (e) => {
+        logMessage(`Key "${e.key}" released [event: keyup]`);
+        if (e.key=="Enter"){
+          document.getElementById("edit-acercade").style.display="none"
+        }
+      });
+      
+      //carga el contenido de un archivo de texto
+      //y lo muestra en el parrafo
+      function showFile(input) {
+        let file = input.files[e];
+        alert(`File name: ${file.name}`); // e.g my.png
+        alert(`Last modified: ${file.lastModified}`); // e.g 1552830408824
+      
+      let reader = new FileReader();
+      reader.readAsText(file);
+      reader.onload = function() {
+        console.log(reader.result);
+        document.getElementById("text-acercade").innerText=reader.result;
+      };
+      reader.onerror = function() {
+          console.log(reader.error);
+      };
+    }
+    </script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</HTML>
