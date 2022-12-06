@@ -26,14 +26,18 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
   <body>
 
     <img src="./logosrequeridos.png">
-
+    
+    <button onclick="validarSuperuser()">LogIn Superuser</button>
+    <button onclick="logOut()">LogOut</button>
+    
     <div class="card imagenFondo" id="first-card">
           <div id="profile-background"><img src="linktoBckgFotoDB.jpg">
           </div>
 
           <div id="info">
-            <div id="info-img">
-              <img class="profile-image" src="linktoPersonalFotoDB.jpg">
+            <img class="profile-image" src="linktoPersonalFotoDB.jpg">
+              
+            <div class="botonEdicion" style="display:none" id="info-img">
               <div class="btn-edit"><img src="./pencil-square.svg" alt="Editar" width="20" height="20"></a></div>
             </div>
           </div>
@@ -74,7 +78,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Acerca de</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()" style="display:none">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -91,8 +95,8 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Antecedentes laborales</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
-            <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+            <img src="./pencil-square.svg" alt="Editar" width="20" height="20" >
           </div> 
         </div> 
         <div> 
@@ -106,7 +110,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Educacion</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -121,7 +125,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Hard y soft skills</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -136,7 +140,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Hard y soft skills</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -151,7 +155,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       <div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Otros intereses</h2> 
-          <div class="btn-edit" onclick="cambiar_parrafo()">
+          <div class="botonEdicion" style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -180,17 +184,14 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       function cambiar_parrafo(){
           document.getElementById("edit-acercade").style.display="block";
           let texto = document.getElementById("text-acercade").innerText;
-          console.log(texto);
+      
       };
       
       function myFunction2(valor){
           document.getElementById("text-acercade").innerText=valor;
       };
             
-      function logMessage(message) {
-        console.log(message + "<br>");
-      };
-
+    
       //controla si se presiono un enter
       let textarea=document.getElementById("edit-acercade")
       textarea.addEventListener('keyup', (e) => {
@@ -206,17 +207,31 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         let file = input.files[e];
         alert(`File name: ${file.name}`); // e.g my.png
         alert(`Last modified: ${file.lastModified}`); // e.g 1552830408824
+        
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function() {
+            console.log(reader.result);
+            document.getElementById("text-acercade").innerText=reader.result;
+        };
+        reader.onerror = function() {
+            console.log(reader.error);
+        };
+      }
+
+      function validarSuperuser(){
+       var elementosDeEdicion=document.getElementsByClassName("btn-edit");
+       elementosDeEdicion.forEach(element => {
+        element.style.display="block";
+       });
+      }
       
-      let reader = new FileReader();
-      reader.readAsText(file);
-      reader.onload = function() {
-        console.log(reader.result);
-        document.getElementById("text-acercade").innerText=reader.result;
-      };
-      reader.onerror = function() {
-          console.log(reader.error);
-      };
-    }
+      function logOut(){
+        var elementosDeEdicion=document.getElementsByClassName("btn-edit");
+        elementosDeEdicion.forEach(element => {
+            element.style.display="none";
+        });
+      }
     </script>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
