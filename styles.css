@@ -24,40 +24,10 @@ padding-bottom:32px;
 padding-left:32px;
 }
 
-/*div#info-actions button {
-margin-right: 8px;
-}*/
-
-/*div#info-contact span {
-font-size: 1rem;
-font-weight: 400;
-}*/
-
-/*div#info-contact span a {
-color: #0a66c2;
-touch-action: manipulation;
-text-decoration: none;
-}*/
-
-/*div#info-company {
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.25;
-}*/
-
 div#info-data {
 display: flex;
 justify-content: space-between;
 }
-
-/*div#info-data h1 {
-font-size: 1.8rem;
-display: inline;
-font-weight: 500;
-line-height: 1.25;
-word-wrap: break-word;
-word-break: break-word;
-}*/
 
 div#info-data ul#info-details {
 width: 232px;
@@ -85,24 +55,6 @@ height: 32px;
 margin-right: 20px;
 }
 
-/*ul.items-list {
-list-style: none inside;
-}*/
-
-/*ul.items-list li {
-display: flex;
-margin: 10px 0;
-}*/
-
-/*ul.items-list li div.data-container {
-flex-grow: 1;
-}*/
-
-/*ul.items-list li div.data-container a {
-display: flex;
-color: black;
-}*/
-
 .btn-edit {
 border-radius: 6px;
 cursor: pointer;
@@ -113,4 +65,8 @@ text-transform: uppercase;
     
 .btn-edit:hover {
 cursor:pointer;
+}
+
+.editBox {
+display:none;
 }
