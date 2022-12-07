@@ -30,6 +30,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     
     <div class="card imagenFondo" id="first-card">
         <div id="profile-background"><img src="linktoBckgFotoDB.jpg">
+          <input type="file" id="filel" onchange="showFile(this)"> 
         </div>
 
         <div id="info">
@@ -82,7 +83,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-acercade">Matematico, fisico e imformatico argentine</p> 
         </div>
         <div> 
-            <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-acercade" type="text" oninput="myFunction2(this.value,'text-acercade')" style="display:none"> 
         </div>
     </div> 
   
@@ -97,7 +98,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-antecedentes">Link a los disitintos antecdentes en la DB</p> 
         </div>
         <div> 
-            <input id="edit-antecedentes" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-antecedentes" type="text" oninput="myFunction2(this.value,'text-antecedentes')" style="display:none"> 
         </div>
     </div>
 
@@ -112,7 +113,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-educacion">Link a los disitintos niveles educactivos en la DB</p> 
         </div>
         <div> 
-            <input id="edit-educacion" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-educacion" type="text" oninput="myFunction2(this.value,'text-educacion')" style="display:none"> 
         </div>
     </div>
 
@@ -127,7 +128,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-skills">Link a los disitintos skills en la DB</p> 
         </div>
         <div> 
-            <input id="edit-skils" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-skils" type="text" oninput="myFunction2(this.value,'text-skills')" style="display:none"> 
         </div>
     </div>
 
@@ -142,7 +143,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-proyectos">Link a los distintos proyectos en la DB</p> 
         </div>
         <div> 
-            <input id="edit-proyectos" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-proyectos" type="text" oninput="myFunction2(this.value,'text-proyectos')" style="display:none"> 
         </div>
     </div>
 
@@ -157,7 +158,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <p id="text-otros">Link a los distintos intereses en la DB</p> 
         </div>
         <div> 
-            <input id="edit-otros" type="text" oninput="myFunction2(this.value)" style="display:none"> 
+            <input class="editBox" id="edit-otros" type="text" oninput="myFunction2(this.value,'text-otros')" style="display:none"> 
         </div>
     </div> 
     
@@ -175,16 +176,17 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
           //let texto = document.getElementById("text-acercade").innerText;
       };
       
-      function myFunction2(valor){
-          document.getElementById("text-acercade").innerText=valor;
+      function myFunction2(valor,idAEditar){
+          document.getElementById(idAEditar).innerText=valor;
       };
-            
-      //controla si se presiono un enter
+      
+      /*
       document.getElementById("edit-acercade").addEventListener('keyup', (e) => {
         if (e.key=="Enter"){
           document.getElementById("edit-acercade").style.display="none"
         }
       });
+      */
 
       function validarSuperuser(){
             /*var elementosDeEdicion=document.getElementsByClassName("btn-edit");
@@ -202,7 +204,29 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
         for (let i = 0; i < collection.length; i++) {
             collection[i].style.display="none";
         }
+        const collection2 = document.getElementsByClassName("editBox");
+        for (let i = 0; i < collection2.length; i++) {
+            collection2[i].style.display="none";
+        }
+
       }
+      
+      /*
+      function showFile(input) {
+        let file = input.files[e];
+        alert(`File name: ${file.name}`); // e.g my.png
+        alert(`Last modified: ${file.lastModified}`); // e.g 1552830408824
+      
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function() {
+          console.log(reader.result);
+          document.getElementById("text-acercade").innerText=reader.result;
+        };
+        reader.onerror = function() {
+            console.log(reader.error);
+        };
+      }*/
       
     </script>
   
