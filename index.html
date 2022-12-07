@@ -19,7 +19,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <meta name="viewport” contents"width=device-width, initial-scale=1>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Link to TitlePortfolioDB</title>
+    <title>Portfolio Rodrigo Y</title>
   </head>
 
   <body>
@@ -74,7 +74,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--Acerca de--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Acerca de</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()" style="display:none">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-acercade')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -89,7 +89,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--Antecedentes laborales--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Antecedentes laborales</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-antecedentes')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20" >
           </div> 
         </div> 
@@ -104,7 +104,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--Educacion--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Educacion</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-educacion')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -119,7 +119,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--Skilss--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Hard y soft skills</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-skils')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -134,7 +134,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--Proyectos Realizados--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Proyectos Realizados</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-proyectos')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -149,7 +149,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
     <!--otros Intereses--><div class="card imagenFondo">
         <div class="card-titles"> 
           <h2>Otros intereses</h2> 
-          <div  style="display:none" class="btn-edit" onclick="cambiar_parrafo()">
+          <div  style="display:none" class="btn-edit" onclick="habilitarEdicion('edit-otros')">
             <img src="./pencil-square.svg" alt="Editar" width="20" height="20">
           </div> 
         </div> 
@@ -170,9 +170,9 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
       //toma el valor del texto del parrafo con id “text-acercade”      
       //lo muestra en consola
       
-      function cambiar_parrafo(){
-          document.getElementById("edit-acercade").style.display="block";
-          let texto = document.getElementById("text-acercade").innerText;
+      function habilitarEdicion(valor){
+          document.getElementById(valor).style.display="block";
+          //let texto = document.getElementById("text-acercade").innerText;
       };
       
       function myFunction2(valor){
