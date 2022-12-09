@@ -45,10 +45,10 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
             <div>
               <h1>Rodrigo Y</h1>
 
-              <div id="info-company">Link to PositionEnDB</div>
+              <div id="info-company">Ingeniero electrico y en electronica, UNLP</div>
               <div id="info-contact">
-                <span>Link to ResidenciaEnDB</span>
-                <span><a href="#">Información de contacto</a></span>
+                <span id="residenciaActual">Link to ResidenciaEnDB</span>
+                <input class="editBox" id="edit-residencia" type="text" oninput="edicionDeParametros(this.value,'residenciaActual')"> 
               </div>
             </div>
 
@@ -61,19 +61,19 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
               </li>
               <li><a href="#">
                 <img src="ico.jpg">
-                <h2>Link to PosActualDB</h2>
+                <h2>Link to EmpresaActualDB</h2>
               </a>
               </li>
             </ul>
 
         </div>
-
+<!--
         <div id="info-actions">
           <button type="button" class="btn btn-primary">Tengo interés en</button>
           <button type="button" class="btn btn-light">Anadir Seccion</button>
           <button type="button" class="btn btn-light">Mas</button>
         </div>
-               
+    -->           
     </div>
 
     <!--Acerca de--><div class="card imagenFondo">
@@ -82,7 +82,7 @@ El doucmento debe encerrarse por completo entre los tags html y los dos principa
           
         </div> 
         <div> 
-            <p id="text-acercade">Matematico, fisico e imformatico argentine</p> 
+            <p id="text-acercade">Link to PositionEnDB, Información de contacto</p> 
         </div>
         <div> 
             <input class="editBox" id="edit-acercade" type="text" oninput="edicionDeParametros(this.value,'text-acercade')"> 
